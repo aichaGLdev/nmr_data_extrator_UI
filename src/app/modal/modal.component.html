@@ -1,0 +1,19 @@
+<div mat-dialog-content>
+  <form [formGroup]="service.Spectrums">
+    <!-- fieldsets -->
+    <fieldset>
+      <h2 class="fs-title">Autofill Form with RMN 1D Spectral Image</h2>
+          <input type="file" (change)="service.onFileChange($event, 'C')" />
+            <div *ngIf="service.atom_step && !service.selectedFiles.C">
+              13C Spectrum is required
+            </div>
+
+          <input type="file" (change)="service.onFileChange($event, 'H')" />
+            <div *ngIf="service.atom_step && !service.selectedFiles.H">
+              1H Spectrum is required
+            </div>
+      <input (click)="onClose()" type="button" class="action-button" name="next"  value="Upload"/>
+    </fieldset>
+  </form>
+</div>
+

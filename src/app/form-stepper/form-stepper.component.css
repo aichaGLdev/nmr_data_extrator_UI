@@ -1,0 +1,443 @@
+/* Loader container */
+/* Loader container */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6); /* Couleur de fond avec transparence */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Loader spinner */
+.loader::before {
+  content: '';
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+/* Animation de rotation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Texte de chargement */
+.loader-text {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #3498db;
+  font-weight: bold;
+}
+
+
+.table-section {
+  background-color: #f5f5f5;
+  padding: 20px; /* Assurez-vous que ceci correspond à votre mise en page */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white; /* Si vous voulez un fond blanc pour le tableau */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #FCB500; /* Couleur de fond pour les en-têtes */
+  color: white; /* Couleur du texte pour les en-têtes */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+}
+
+tbody tr:hover {
+  background-color: #ddd; /* Couleur de fond pour les lignes au survol */
+}
+
+.fieldset-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-section, .table-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.table-section {
+  background-color: #fff;
+  /*border-left: 1px solid #ccc; */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+td {
+  color: black;
+}
+
+
+.centered-label {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #aaa; /* Style similaire aux placeholders */
+
+}
+
+/* Conteneur pour chaque groupe de checkbox */
+.checkbox-group {
+  display: flex;
+  justify-content: center; /* Centrer les éléments horizontalement */
+  gap: 20px; /* Espace entre les labels */
+}
+
+/* Labels pour les checkboxes */
+.checkbox-group label {
+  display: flex;
+  flex-direction: column; /* Aligner le texte au-dessus de la checkbox */
+  align-items: center; /* Centrer les éléments horizontalement */
+  gap: 5px; /* Espace entre le texte et la checkbox */
+}
+#msform , #msform1 ,#msform2 ,#msform3 ,#msform4   {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  color: red;
+}
+/* Conteneur pour les champs alignés horizontalement */
+.form-row {
+  display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
+  gap: 10px; /* Espace entre les champs */
+  flex-wrap: wrap; /* Permet au contenu de se déplacer à la ligne suivante si nécessaire */
+}
+
+/* Conteneur pour chaque champ et message d'erreur */
+.form-group {
+  flex: 1; /* Permet aux éléments de s'étendre également */
+  min-width: 150px; /* Définit une largeur minimale pour chaque champ */
+  display: flex; /* Utilise flexbox pour empiler l'input et le message d'erreur */
+  flex-direction: column; /* Empile l'input et le message d'erreur verticalement */
+  margin-bottom: 15px; /* Espace en bas de chaque groupe de formulaire */
+}
+
+/* Style pour les messages d'erreur */
+.error-message {
+  color: red; /* Couleur du texte des messages d'erreur */
+  font-size: 0.9em; /* Taille du texte des messages d'erreur */
+}
+
+
+#msform fieldset, #msform1 fieldset ,#msform2 fieldset ,#msform3 fieldset ,#msform4 fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 0px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) , #msform1 fieldset:not(:first-of-type) ,#msform2 fieldset:not(:first-of-type) ,#msform3 fieldset:not(:first-of-type) ,#msform4 fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input, #msform1 input,#msform2 input,#msform3 input,#msform4 input, #msform textarea, #msform1 textarea,#msform2 textarea,#msform3 textarea,#msform4 textarea{
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 18px;
+}
+#msform input:focus, #msform textarea:focus , #msform1 input:focus, #msform1 textarea:focus ,#msform2 input:focus, #msform2 textarea:focus ,#msform3 input:focus, #msform3 textarea:focus ,#msform4 input:focus, #msform4 textarea:focus  {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #FCB500;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}
+/*buttons*/
+#msform .action-button, #msform1 .action-button,#msform2 .action-button,#msform3 .action-button,#msform4 .action-button {
+  width: 100px;
+  background: #FCB500;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform4 .all-solutions {
+  background: #acacac;
+  width: auto;
+}
+#msform4 .action-button {
+  width: auto;
+}
+#msform .action-button:hover , #msform .action-button:focus , #msform1 .action-button:hover , #msform1 .action-button:focus , #msform2 .action-button:hover , #msform2 .action-button:focus, #msform3 .action-button:hover , #msform3 .action-button:focus , #msform4 .action-button:hover , #msform4 .action-button:focus{
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #FCB500;
+}
+#msform .action-button-previous , #msform1 .action-button-previous,#msform2 .action-button-previous,#msform3 .action-button-previous,#msform4 .action-button-previous {
+  width: 100px;
+  background: #407BFF;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button-previous:hover, #msform .action-button-previous:focus ,#msform1 .action-button-previous:hover, #msform1 .action-button-previous:focus ,#msform2 .action-button-previous:hover, #msform2 .action-button-previous:focus , #msform3 .action-button-previous:hover, #msform3 .action-button-previous:focus ,#msform4 .action-button-previous:hover, #msform4 .action-button-previous:focus{
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #407BFF;
+}
+/*headings*/
+.fs-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 20%;
+  float: left;
+  position: relative;
+  letter-spacing: 1px;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 24px;
+  height: 24px;
+  line-height: 26px;
+  display: block;
+  font-size: 12px;
+  color: #333;
+  background: white;
+  border-radius: 25px;
+  margin: 0 auto 10px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+  background: #FCB500;
+  color: white;
+}
+#progressbar li.inactive:before{
+  background: burlywood;
+  color: #000;
+}
+fieldset {
+  /* for chrome and safari*/
+  -webkit-animation-duration: .25ms;-webkit-animation-name: slidein;
+  /*for firefox*/
+  -moz-animation-duration: 1s;-moz-animation-name: slidein;
+  /* for opera*/
+  -o-animation-duration: 1s;-o-animation-name: slidein;
+  /* Standard syntax*/
+  animation-duration: 1s;animation-name: slidein;
+}
+@-webkit-keyframes slidein {
+  from { margin-right:100%;width:300%;}
+  to { margin-right: 0%;width: 100%;           }
+}
+@-moz-keyframes slidein {
+  from {
+    margin-left: 100%;width: 300%;
+  }
+  to {
+    margin-left: 0%; width: 100%;
+  }
+}
+@-o-keyframes slidein {
+  from {
+    margin-left: 100%;width: 300%;
+  }
+  to {
+    margin-left: 0%;width: 100%;
+  }
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;width: 300%;
+  }
+  to {
+    margin-left: 0%;width: 100%;
+  }
+}
+/* Appliquer le même style que les autres champs de saisie */
+#msform , #msform1 ,#msform2 ,#msform3 ,#msform4 ,#msform5 {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  color: red;
+}
+
+#msform fieldset, #msform1 fieldset ,#msform2 fieldset ,#msform3 fieldset ,#msform4 fieldset, #msform5 fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 0px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type), #msform1 fieldset:not(:first-of-type), #msform2 fieldset:not(:first-of-type), #msform3 fieldset:not(:first-of-type), #msform4 fieldset:not(:first-of-type), #msform5 fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*inputs*/
+#msform input, #msform1 input, #msform2 input, #msform3 input, #msform4 input, #msform5 input, #msform textarea, #msform1 textarea, #msform2 textarea, #msform3 textarea, #msform4 textarea, #msform5 textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 18px;
+}
+
+/* focus state */
+#msform input:focus, #msform textarea:focus, #msform1 input:focus, #msform1 textarea:focus, #msform2 input:focus, #msform2 textarea:focus, #msform3 input:focus, #msform3 textarea:focus, #msform4 input:focus, #msform4 textarea:focus, #msform5 input:focus, #msform5 textarea:focus {
+  box-shadow: none !important;
+  border: 1px solid #FCB500;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button, #msform1 .action-button, #msform2 .action-button, #msform3 .action-button, #msform4 .action-button, #msform5 .action-button {
+  width: 100px;
+  background: #FCB500;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus, #msform1 .action-button:hover, #msform1 .action-button:focus, #msform2 .action-button:hover, #msform2 .action-button:focus, #msform3 .action-button:hover, #msform3 .action-button:focus, #msform4 .action-button:hover, #msform4 .action-button:focus, #msform5 .action-button:hover, #msform5 .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #FCB500;
+}
+
+/*previous button*/
+#msform .action-button-previous, #msform1 .action-button-previous, #msform2 .action-button-previous, #msform3 .action-button-previous, #msform4 .action-button-previous, #msform5 .action-button-previous {
+  width: 100px;
+  background: #407BFF;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus, #msform1 .action-button-previous:hover, #msform1 .action-button-previous:focus, #msform2 .action-button-previous:hover, #msform2 .action-button-previous:focus, #msform3 .action-button-previous:hover, #msform3 .action-button-previous:focus, #msform4 .action-button-previous:hover, #msform4 .action-button-previous:focus, #msform5 .action-button-previous:hover, #msform5 .action-button-previous:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #407BFF;
+}
+
+/* select fields */
+#msform select, #msform1 select, #msform2 select, #msform3 select, #msform4 select, #msform5 select {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 18px;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+}
+.suggestion-message {
+  color: #007bff; /* Couleur pour le texte de suggestion */
+  font-style: italic; /* Italique pour différencier le message */
+  margin-top: 0.5rem; /* Espace au-dessus du message */
+  padding: 0.5rem; /* Espacement intérieur */
+  border: 1px solid #007bff; /* Bordure pour délimiter le message */
+  border-radius: 4px; /* Coins arrondis pour une apparence plus douce */
+  background-color: #f0f8ff; /* Couleur de fond légère pour mettre en avant le message */
+}

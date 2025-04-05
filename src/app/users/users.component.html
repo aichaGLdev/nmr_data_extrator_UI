@@ -1,0 +1,38 @@
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-12 col-md-offset-3">
+      <fieldset class="fieldset">
+        <h2 class="fs-title">Users</h2>
+        <div class="table-section">
+          <table>
+            <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of service.AdminUsers">
+              <td>{{ user.firstname }}</td>
+              <td>{{ user.lastname }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.enabled ? 'enabled' : 'disabled' }}</td>
+
+              <td>
+                <input *ngIf="!user.enabled" (click)="activateUser(user.id)" type="button"  name="previous" class="previous action-button-previous" value="Enable"/>
+                <input *ngIf="user.enabled" (click)="deactivateUser( user.id)" type="button" name="next" class="next action-button" value="Disable"/>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </fieldset>
+    </div>
+  </div>
+</div>

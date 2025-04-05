@@ -1,0 +1,34 @@
+<nav class="navbar">
+  <div class="navbar-container container">
+    <input type="checkbox" name="" id="" />
+    <div class="hamburger-lines">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </div>
+
+    <img
+      routerLink="/Home"
+      class="logo"
+      src="assets/logo.png"
+      alt="CpMolGen Logo"
+    />
+    <ul class="menu-items">
+      <li
+        (click)="closeMenu()"
+        routerLink=""
+      >
+        Home
+      </li>
+      <li (click)="closeMenu()" routerLink="/case">CPMolgen</li>
+
+      <li (click)="navigateToSection('services')">Services</li>
+
+      <li (click)="navigateToSection('contact')">Contact us</li>
+    </ul>
+    <div class="button-wrapper">
+      <li  routerLink="/login">Login</li>
+      <button routerLink="/register">Sign Up</button>
+    </div>
+  </div>
+</nav>

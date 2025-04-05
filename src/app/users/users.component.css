@@ -1,0 +1,115 @@
+
+.action-button {
+  width: 100px;
+  background: red;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+
+.action-button:hover ,action-button:focus{
+  box-shadow: 0 0 0 2px white, 0 0 0 3px red;
+}
+.action-button-previous  {
+  width: 100px;
+  background: #407BFF;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+.action-button-previous:hover, .action-button-previous:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #407BFF;
+}
+input {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 18px;
+}
+input:focus{
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #FCB500;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}
+
+.fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 0px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  /*stacking fieldsets above each other*/
+  position: relative;
+  margin-top: 5%;
+}
+/*Hide all except first fieldset*/
+.fieldset:not(:first-of-type) {
+  display: none;
+}
+/*headings*/
+.fs-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.fieldset{
+  text-align: center;
+  position: relative;
+
+}
+
+
+.table-section {
+  padding: 20px; /* Assurez-vous que ceci correspond à votre mise en page */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white; /* Si vous voulez un fond blanc pour le tableau */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #FCB500; /* Couleur de fond pour les en-têtes */
+  color: white; /* Couleur du texte pour les en-têtes */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+}
+
+tbody tr:hover {
+  background-color: #ddd; /* Couleur de fond pour les lignes au survol */
+}

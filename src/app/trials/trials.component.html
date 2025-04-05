@@ -1,0 +1,33 @@
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-12 col-md-offset-3">
+      <fieldset class="fieldset">
+        <h2 class="fs-title">Trials</h2>
+        <div class="table-section">
+          <table>
+            <thead>
+            <tr>
+              <th>Trial</th>
+              <th>Molecular Formula</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let molecule of service.userMolecules">
+              <td>Trial {{ molecule.id }}</td>
+              <td>{{ molecule.chimicalformula }}</td>
+              <td>
+                <input  (click)="service.executeRetrialAndNavigate()" type="button"  name="previous" class="previous action-button-previous" value="Retrial"/>
+                <input (click)="service.deleteTrailById( molecule.id)" type="button" name="next" class="next action-button" value="Delete"/>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </fieldset>
+    </div>
+  </div>
+</div>

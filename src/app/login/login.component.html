@@ -1,0 +1,45 @@
+<div class="login-container">
+  <div class="login-image">
+    <img src="assets/Frame.png" class="assets-login" />
+  </div>
+  <div routerLink="/Home" class="back-arrow-wrraper">
+    <img src="assets/backArrow.svg" class="backArrow" />
+    <p>Back</p>
+  </div>
+  <div class="login-form">
+    <h1>Account Login</h1>
+    <p>
+      If you are already a member you can login with <br />your email address
+      and password.
+    </p>
+    <hr />
+    <div class="form-email-container element-direction">
+      <label for="login">Email address</label>
+      <input
+        [(ngModel)]="authRequest.email"
+        type="email"
+        id="login"
+        placeholder="Email address"
+      />
+    </div>
+    <div class="form-password-container element-direction">
+      <label for="password">Password</label>
+      <input
+        [(ngModel)]="authRequest.password"
+        type="password"
+        id="password"
+        placeholder="Your Password"
+      />
+    </div>
+
+    <button (click)="login()" type="button" class="login-button">
+      Login now
+    </button>
+    <div class="sign-up-link">
+      Don't have an account?
+      <button (click)="register()" type="button" class="btn btn-link">
+        Sign up here
+      </button>
+    </div>
+  </div>
+</div>
